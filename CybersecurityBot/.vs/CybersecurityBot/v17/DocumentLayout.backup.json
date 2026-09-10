@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\displayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\displayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\responsemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\responsemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\audioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\audioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\cybersecuritybot.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\cybersecuritybot.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|c:\\users\\student\\documents\\github\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\cybersecuritybot\\cybersecuritybot\\chatbotengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}|CybersecurityBot\\CybersecurityBot.csproj|solutionrelative:cybersecuritybot\\chatbotengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CybersecurityBot.csproj",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\CybersecurityBot.csproj",
+              "RelativeDocumentMoniker": "CybersecurityBot\\CybersecurityBot.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\CybersecurityBot.csproj",
+              "RelativeToolTip": "CybersecurityBot\\CybersecurityBot.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-09T07:39:22.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatbotEngine.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\ChatbotEngine.cs",
+              "RelativeDocumentMoniker": "CybersecurityBot\\ChatbotEngine.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\ChatbotEngine.cs",
+              "RelativeToolTip": "CybersecurityBot\\ChatbotEngine.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T11:26:58.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResponseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\ResponseManager.cs",
+              "RelativeDocumentMoniker": "CybersecurityBot\\ResponseManager.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\ResponseManager.cs",
+              "RelativeToolTip": "CybersecurityBot\\ResponseManager.cs",
+              "ViewState": "AgIAABUAAACgyszMzEwnwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T11:26:13.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DisplayService.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\DisplayService.cs",
+              "RelativeDocumentMoniker": "CybersecurityBot\\DisplayService.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\DisplayService.cs",
+              "RelativeToolTip": "CybersecurityBot\\DisplayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T11:24:42.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AudioService.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\AudioService.cs",
+              "RelativeDocumentMoniker": "CybersecurityBot\\AudioService.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\AudioService.cs",
+              "RelativeToolTip": "CybersecurityBot\\AudioService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAswD0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T11:22:19.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\Program.cs",
+              "RelativeDocumentMoniker": "CybersecurityBot\\Program.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\\CybersecurityBot\\CybersecurityBot\\Program.cs",
+              "RelativeToolTip": "CybersecurityBot\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T11:15:25.049Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
