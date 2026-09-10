@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybersecurityBot", "CybersecurityBot\CybersecurityBot.csproj", "{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6D5266-6EDA-4FB4-8F8D-EDF6B599548E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A86A4FF3-DE59-4D4B-A12D-75F609FBB444}
+	EndGlobalSection
+EndGlobal
