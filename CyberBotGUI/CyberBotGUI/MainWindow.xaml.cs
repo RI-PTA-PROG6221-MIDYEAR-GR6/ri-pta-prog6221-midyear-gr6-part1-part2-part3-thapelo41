@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.IO;
 using System.Media;
 using System.Windows;
@@ -19,10 +18,10 @@ namespace CyberBotGUI
         {
             InitializeComponent();
 
-            // Requirement: Translate Part 1 Voice Implementation
+            // Translate Part 1 Voice Implementation into the GUI
             PlayVoiceGreeting();
 
-            // Requirement: Translate Part 1 ASCII Art
+            // Translate Part 1 ASCII Art into the GUI
             DisplayAsciiArt();
 
             // Initial Bot Message
@@ -30,14 +29,15 @@ namespace CyberBotGUI
         }
 
         /// <summary>
-        /// Plays the voice greeting from Part 1.
+        /// Plays the voice greeting WAV file when the application launches.
+        /// The file is copied to the output directory via the .csproj configuration.
         /// </summary>
         private void PlayVoiceGreeting()
         {
             try
             {
-                // Ensure 'greeting.wav' is in the project folder and set to 'Copy if newer'
                 string audioPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "greeting.wav");
+
                 if (File.Exists(audioPath))
                 {
                     SoundPlayer player = new SoundPlayer(audioPath);
@@ -46,12 +46,12 @@ namespace CyberBotGUI
                 }
                 else
                 {
-                    StatusText.Text = "⚠️ Voice file (greeting.wav) not found.";
+                    StatusText.Text = "⚠️ Voice file not found at: " + audioPath;
                 }
             }
             catch (Exception ex)
             {
-                // Requirement: Error Handling (don't crash if audio fails)
+                // Error Handling: don't crash if audio fails
                 StatusText.Text = "⚠️ Error playing audio: " + ex.Message;
             }
         }
@@ -61,7 +61,6 @@ namespace CyberBotGUI
         /// </summary>
         private void DisplayAsciiArt()
         {
-            // PASTE YOUR PART 1 ASCII ART HERE
             string ascii = @"
    ______      __              __ 
   / ____/_  __/ /_  ___  _____/ /_
@@ -89,6 +88,7 @@ namespace CyberBotGUI
 
         /// <summary>
         /// Processes the user's input, invokes the bot, and updates the UI.
+        /// Uses a delegate (Func) to decouple UI from bot logic.
         /// </summary>
         private void ProcessUserInput()
         {
@@ -98,9 +98,7 @@ namespace CyberBotGUI
             AddMessage("You: " + userText);
             UserInput.Clear();
 
-            // Requirement: Use delegates to solve a programming problem.
-            // We define a delegate (Func) that takes a string and returns a string.
-            // This decouples the UI from the bot logic.
+            // Use a delegate (Func<string, string>) to decouple the UI from bot logic
             Func<string, string> responseDelegate = (input) =>
             {
                 bool isSentiment;
@@ -109,7 +107,7 @@ namespace CyberBotGUI
 
             string botResponse = responseDelegate(userText);
 
-            // Simulate typing delay for a natural feel (Conversation Flow rubric)
+            // Simulate typing delay for a natural, responsive feel
             System.Threading.Tasks.Task.Delay(400).ContinueWith(_ =>
             {
                 Dispatcher.Invoke(() => AddMessage("Bot: " + botResponse));
