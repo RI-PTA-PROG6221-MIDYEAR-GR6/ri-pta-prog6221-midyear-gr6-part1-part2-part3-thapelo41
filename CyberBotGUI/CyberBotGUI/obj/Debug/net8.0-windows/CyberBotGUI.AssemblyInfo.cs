@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberBotGUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1de98816bfd8f7107657f6598b7a6f17445a93f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96a7fee7294bf504900a1c170eb5e67a04cd8541")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberBotGUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberBotGUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
