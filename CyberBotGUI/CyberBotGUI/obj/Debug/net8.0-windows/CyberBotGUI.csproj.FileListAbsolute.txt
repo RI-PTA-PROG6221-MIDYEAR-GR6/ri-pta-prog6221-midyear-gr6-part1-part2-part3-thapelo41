@@ -18,3 +18,4 @@ C:\Users\Student\Documents\GitHub\ri-pta-prog6221-midyear-gr6-part1-part2-part3-
 C:\Users\Student\Documents\GitHub\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\CyberBotGUI\CyberBotGUI\obj\Debug\net8.0-windows\CyberBotGUI.pdb
 C:\Users\Student\Documents\GitHub\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\CyberBotGUI\CyberBotGUI\obj\Debug\net8.0-windows\CyberBotGUI.genruntimeconfig.cache
 C:\Users\Student\Documents\GitHub\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\CyberBotGUI\CyberBotGUI\obj\Debug\net8.0-windows\ref\CyberBotGUI.dll
+C:\Users\Student\Documents\GitHub\ri-pta-prog6221-midyear-gr6-part1-part2-part3-thapelo41\CyberBotGUI\CyberBotGUI\bin\Debug\net8.0-windows\greeting.wav
