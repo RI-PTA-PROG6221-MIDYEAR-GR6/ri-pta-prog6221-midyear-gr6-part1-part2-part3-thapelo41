@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <!-- Copy the WAV file to the ROOT of the output folder (not a subfolder) -->
+  <ItemGroup>
+    <None Update="Audio\greeting.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>greeting.wav</TargetPath>
+    </None>
+  </ItemGroup>
+
 </Project>
