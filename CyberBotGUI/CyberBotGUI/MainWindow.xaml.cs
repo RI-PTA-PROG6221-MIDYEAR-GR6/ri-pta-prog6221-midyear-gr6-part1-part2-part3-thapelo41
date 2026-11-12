@@ -3,93 +3,59 @@ using System.IO;
 using System.Media;
 using System.Windows;
 using System.Windows.Input;
+using System.Collections.Generic;
 
 namespace CyberBotGUI
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// Handles UI events and delegates communication with the CyberBot class.
-    /// </summary>
     public partial class MainWindow : Window
     {
         private CyberBot _bot = new CyberBot();
+        private DatabaseHelper _dbHelper = new DatabaseHelper();
+
+        public class TaskItem
+        {
+            public int Id { get; set; }
+            public string DisplayText { get; set; } = "";
+        }
 
         public MainWindow()
         {
             InitializeComponent();
-
-            // Translate Part 1 Voice Implementation into the GUI
             PlayVoiceGreeting();
-
-            // Translate Part 1 ASCII Art into the GUI
             DisplayAsciiArt();
-
-            // Initial Bot Message
             AddMessage("Bot: Hello! I am your Cybersecurity Assistant. How can I help you today?");
+            LoadDatabaseTasks();
         }
 
-        /// <summary>
-        /// Plays the voice greeting WAV file when the application launches.
-        /// The file is copied to the output directory via the .csproj configuration.
-        /// </summary>
         private void PlayVoiceGreeting()
         {
             try
             {
                 string audioPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "greeting.wav");
-
                 if (File.Exists(audioPath))
                 {
                     SoundPlayer player = new SoundPlayer(audioPath);
                     player.Play();
-                    StatusText.Text = "🔊 Voice Greeting Played";
-                }
-                else
-                {
-                    StatusText.Text = "⚠️ Voice file not found at: " + audioPath;
                 }
             }
-            catch (Exception ex)
-            {
-                // Error Handling: don't crash if audio fails
-                StatusText.Text = "⚠️ Error playing audio: " + ex.Message;
-            }
+            catch { }
         }
 
-        /// <summary>
-        /// Displays the ASCII art from Part 1 in the GUI header.
-        /// </summary>
         private void DisplayAsciiArt()
         {
-            string ascii = @"
+            AsciiArtHeader.Text = @"
    ______      __              __ 
   / ____/_  __/ /_  ___  _____/ /_
  / /   / / / / __ \/ _ \/ ___/ __/
 / /___/ /_/ / /_/ /  __/ /  / /_  
 \____/\__, /_.___/\___/_/   \__/  
      /____/                       
-  Cybersecurity Awareness Bot
-";
-            AsciiArtHeader.Text = ascii;
+  Cybersecurity Awareness Bot";
         }
 
-        private void SendButton_Click(object sender, RoutedEventArgs e)
-        {
-            ProcessUserInput();
-        }
+        private void SendButton_Click(object sender, RoutedEventArgs e) { ProcessUserInput(); }
+        private void UserInput_KeyDown(object sender, KeyEventArgs e) { if (e.Key == Key.Enter) ProcessUserInput(); }
 
-        private void UserInput_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                ProcessUserInput();
-            }
-        }
-
-        /// <summary>
-        /// Processes the user's input, invokes the bot, and updates the UI.
-        /// Uses a delegate (Func) to decouple UI from bot logic.
-        /// </summary>
         private void ProcessUserInput()
         {
             string userText = UserInput.Text.Trim();
@@ -98,32 +64,73 @@ namespace CyberBotGUI
             AddMessage("You: " + userText);
             UserInput.Clear();
 
-            // Use a delegate (Func<string, string>) to decouple the UI from bot logic
-            Func<string, string> responseDelegate = (input) =>
-            {
-                bool isSentiment;
-                return _bot.GetResponse(input, out isSentiment);
-            };
-
+            Func<string, string> responseDelegate = (input) => { bool s; return _bot.GetResponse(input, out s); };
             string botResponse = responseDelegate(userText);
 
-            // Simulate typing delay for a natural, responsive feel
+            if (botResponse == "QUIZ_START")
+            {
+                AddMessage("Bot: Opening the Cybersecurity Quiz...");
+                QuizWindow quiz = new QuizWindow();
+                quiz.ShowDialog();
+                return;
+            }
+
             System.Threading.Tasks.Task.Delay(400).ContinueWith(_ =>
             {
-                Dispatcher.Invoke(() => AddMessage("Bot: " + botResponse));
+                Dispatcher.Invoke(() => {
+                    AddMessage("Bot: " + botResponse);
+                    if (botResponse.Contains("Task added") || botResponse.Contains("Got it!") || botResponse.Contains("Okay, I added"))
+                        LoadDatabaseTasks();
+                });
             });
         }
 
-        /// <summary>
-        /// Adds a message to the chat history and auto-scrolls to the bottom.
-        /// </summary>
         private void AddMessage(string message)
         {
             ChatHistory.Items.Add(message);
-            if (ChatHistory.Items.Count > 0)
+            if (ChatHistory.Items.Count > 0) ChatHistory.ScrollIntoView(ChatHistory.Items[ChatHistory.Items.Count - 1]);
+        }
+
+        // --- TASK MANAGER METHODS ---
+        private void LoadDatabaseTasks()
+        {
+            try
             {
-                ChatHistory.ScrollIntoView(ChatHistory.Items[ChatHistory.Items.Count - 1]);
+                var rawTasks = _dbHelper.GetTasks();
+                var formattedTasks = new List<TaskItem>();
+                foreach (var t in rawTasks)
+                {
+                    int idStart = t.IndexOf("ID: ") + 4;
+                    int idEnd = t.IndexOf(" |");
+                    int id = int.Parse(t.Substring(idStart, idEnd - idStart).Trim());
+                    string displayText = t.Substring(idEnd + 3).Trim();
+                    formattedTasks.Add(new TaskItem { Id = id, DisplayText = displayText });
+                }
+                TaskListBox.ItemsSource = formattedTasks;
             }
+            catch { AddMessage("Bot: Could not connect to database. Please check MySQL."); }
+        }
+
+        private void RefreshTasks_Click(object sender, RoutedEventArgs e) { LoadDatabaseTasks(); AddMessage("Bot: Task list refreshed."); }
+
+        private void CompleteTask_Click(object sender, RoutedEventArgs e)
+        {
+            if (TaskListBox.SelectedItem is TaskItem selectedTask)
+            {
+                _dbHelper.MarkTaskCompleted(selectedTask.Id);
+                LoadDatabaseTasks();
+            }
+            else AddMessage("Bot: Select a task first.");
+        }
+
+        private void DeleteTask_Click(object sender, RoutedEventArgs e)
+        {
+            if (TaskListBox.SelectedItem is TaskItem selectedTask)
+            {
+                _dbHelper.DeleteTask(selectedTask.Id);
+                LoadDatabaseTasks();
+            }
+            else AddMessage("Bot: Select a task first.");
         }
     }
 }
