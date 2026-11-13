@@ -13,6 +13,7 @@ A fully integrated Graphical User Interface (GUI) application built in C# using 
 - 📝 Activity Log: Tracks actions (tasks added, quiz started) and displays the last 5 actions.
 - 😟 Sentiment Detection: Detects mood (worried, frustrated) and adjusts tone.
 - 🔑 Keyword Recognition: Randomised responses for passwords, scams, privacy, etc.
+- YouTube Video: [https://youtu.be/3BkJ2vMzGVo]
 
 
 
